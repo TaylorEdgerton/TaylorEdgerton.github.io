@@ -2,30 +2,34 @@
 layout: about
 title: About
 permalink: /
-subtitle: <b>Bachelor of Information Technology <br> Major in Software Development</b>  <br> <i>Griffith University (Mid 2023 Graduate)</i>
+subtitle: <b>Automation Engineer</b><br><i>Industrial Systems · Edge Technologies · Software Integration</i>
+
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Logan, QLD 4207</p>
+    <p>Brisbane, QLD</p>
 
 # news: true  # includes a list of news items
 # selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-Hi, I'm Taylor. 
+Specialising in industrial systems, cybersecurity, and edge technologies, I work with asset managers and operations teams to support portfolios of renewable energy and critical infrastructure sites across Australia.  
 
-I've been obsessed with tech and computers since I can remember. Building my own computers, helping Dad at work with Server Administration, and secretly nerding out at LAN parties in the 2000s playing original COD. 
+In my current role as an Automation Engineer, I focus on improving reliability, security, and efficiency across OT systems, from utility-scale renewable generation sites to gas pipeline networks.  
 
-I have used some seriously painful software, in my personal life aswell as the Real Estate and Retail worlds, and can say confidently that I am excited about software, automation systems, and solutions for real world problems.
+### Core Skills
+- SCADA platforms — Ignition, Aveva PlantSCADA/Citect, GeoSCADA  
+- Edge and IoT solutions — MQTT, OPC UA, REST APIs  
+- Cybersecurity — risk assessments and protection strategies aligned with AESCSF  
+- Cloud and containerised environments — Docker on Linux, CI/CD pipelines, scalable integrations  
+- Software development and integration — delivering solutions in Python, C#, and JavaScript  
 
-In my spare time I'm out exploring on my Suzuki DRZ400 Dirtbike, and camping on the beach. I've been 4 Wheel Driving to Cape York, although still have many remote parts of Australia on my radar to explore.
+I’m building on this foundation by exploring AI and machine learning, applying advanced analytics to enable predictive maintenance, intelligent automation, and real-time operational insights across diverse asset portfolios.
 
-This website demonstrates my experiences and skills within software development and programming, outlining details of projects that I have completed, aswell as containing my resume.
 
-I am hoping to gain experience working with companies and people who share my passion. 
 
 
 <!-- I enjoy the creation of digital media, websites and photography and growing up I have always had an interest in computers, how they work, and how software is created. Having an interest in building and programming web and mobile apps with the user in mind, I have decided to pursue this career further and I am currently in my last year of study at Griffith University, and have previously studied photography and design.
