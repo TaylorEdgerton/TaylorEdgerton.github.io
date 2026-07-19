@@ -7,6 +7,7 @@ import puppeteer from 'puppeteer';
 const resumeHtmlPath = resolve('dist/resume/index.html');
 const resumeUrl = pathToFileURL(resumeHtmlPath).href;
 const outputPath = resolve('dist/assets/pdf/Taylor_Edgerton_Resume.pdf');
+const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
 
 async function generateResume() {
   try {
@@ -17,7 +18,10 @@ async function generateResume() {
 
   await mkdir(resolve('dist/assets/pdf'), { recursive: true });
 
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: isGitHubActions ? ['--no-sandbox'] : [],
+  });
 
   try {
     const page = await browser.newPage();
