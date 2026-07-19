@@ -1,0 +1,74 @@
+---
+import NavLeft from '../components/NavLeft.astro';
+import Footer from '../components/Footer.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+}
+
+const { title = 'Taylor Edgerton' } = Astro.props;
+const isHomepage = Astro.url.pathname === '/';
+---
+
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script is:inline>
+    (() => {
+      let theme = 'system';
+      try {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') theme = savedTheme;
+      } catch {
+        // System preference remains the default when storage is unavailable.
+      }
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{title}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<ThemeToggle />
+
+<div class="page">
+  <NavLeft isHomepage={isHomepage} />
+
+  <div class="right">
+    <slot />
+    <Footer />
+  </div>
+</div>
+
+<script is:inline>
+  // Active nav tracking — only runs on the homepage
+  if (window.location.pathname === '/') {
+    const sections = document.querySelectorAll('.section-anchor');
+    const navLinks = document.querySelectorAll('#nav a');
+
+    function updateNav() {
+      let current = '';
+      sections.forEach(function(s) {
+        if (window.scrollY >= s.offsetTop - 160) {
+          current = s.id;
+        }
+      });
+      navLinks.forEach(function(a) {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+  }
+</script>
+
+</body>
+</html>

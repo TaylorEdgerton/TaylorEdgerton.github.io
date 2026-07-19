@@ -1,0 +1,29 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import TagList from '../components/TagList.astro';
+
+interface Props {
+  title: string;
+  date: Date;
+  tags?: string[];
+}
+
+const { title, date, tags } = Astro.props;
+const formattedDate = date.toLocaleDateString('en-AU', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={`${title} — Taylor Edgerton`}>
+  <a href="/blog/" class="back-link">← Back to blog</a>
+  <div class="post-header">
+    <h1>{title}</h1>
+    <div class="post-meta">{formattedDate}</div>
+    {tags && tags.length > 0 && <TagList tags={tags} />}
+  </div>
+  <div class="prose">
+    <slot />
+  </div>
+</BaseLayout>

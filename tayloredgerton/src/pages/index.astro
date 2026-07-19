@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ExperienceItem from '../components/ExperienceItem.astro';
+import ProjectItem from '../components/ProjectItem.astro';
+import { education, experience, profile, projects } from '../data/profile';
+---
+
+<BaseLayout>
+  <section class="section about section-anchor" id="about" aria-labelledby="about-title">
+    <h2 class="section-title" id="about-title">About</h2>
+    {profile.about.map((paragraph) => <p>{paragraph}</p>)}
+  </section>
+
+  <section class="section section-anchor" id="experience" aria-labelledby="experience-title">
+    <h2 class="section-title" id="experience-title">Experience</h2>
+    {experience.map((entry) => (
+      <ExperienceItem
+        date={entry.date}
+        role={entry.role}
+        org={entry.organisation}
+        tags={entry.tags}
+      >
+        {entry.websiteParagraphs.map((paragraph) => <p>{paragraph}</p>)}
+      </ExperienceItem>
+    ))}
+
+    {education.map((entry) => (
+      <ExperienceItem
+        date={entry.date}
+        role={entry.qualification}
+        org={entry.institution}
+        tags={entry.tags}
+      >
+        <p>{entry.websiteDescription}</p>
+      </ExperienceItem>
+    ))}
+  </section>
+
+  <section class="section section-anchor" id="projects" aria-labelledby="projects-title">
+    <h2 class="section-title" id="projects-title">Projects</h2>
+    {projects.map((project) => (
+      <ProjectItem
+        label={project.label}
+        title={project.title}
+        href={project.href}
+        tags={project.tags}
+      >
+        {project.websiteParagraphs.map((paragraph) => <p>{paragraph}</p>)}
+      </ProjectItem>
+    ))}
+  </section>
+</BaseLayout>

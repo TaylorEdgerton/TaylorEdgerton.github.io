@@ -1,0 +1,23 @@
+---
+import TagList from './TagList.astro';
+
+interface Props {
+  date: string;
+  role: string;
+  org: string;
+  tags: string[];
+}
+
+const { date, role, org, tags } = Astro.props;
+---
+
+<div class="exp-item">
+  <div class="exp-date">{date}</div>
+  <div>
+    <div class="exp-role">{role} · <span style="font-weight:400;color:var(--text-mid)">{org}</span></div>
+    <div class="exp-body">
+      <slot />
+    </div>
+    <TagList tags={tags} />
+  </div>
+</div>

@@ -1,0 +1,28 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import TagList from '../components/TagList.astro';
+
+interface Props {
+  title: string;
+  tags?: string[];
+  external_url?: string;
+}
+
+const { title, tags, external_url } = Astro.props;
+---
+
+<BaseLayout title={`${title} — Taylor Edgerton`}>
+  <a href="/" class="back-link">← Home</a>
+  <div class="post-header">
+    <h1>{title}</h1>
+    {tags && tags.length > 0 && <TagList tags={tags} />}
+    {external_url && (
+      <a href={external_url} target="_blank" rel="noopener" class="external-link">
+        View project ↗
+      </a>
+    )}
+  </div>
+  <div class="prose">
+    <slot />
+  </div>
+</BaseLayout>
