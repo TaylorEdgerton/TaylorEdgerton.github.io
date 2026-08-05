@@ -300,7 +300,7 @@ export const projects: ProjectEntry[] = [
       text(
         'Planned and implemented a TimescaleDB migration path and Postgres upgrade for historian data',
         'across 9 historian databases, covering more than 200,000 data points and over',
-        '1 TB of raw operational data. Involving automated backfilling raw data and aggregates through TimescaleDB jobs',
+        '1.5 TB of raw operational data. Involving automated backfilling raw data and aggregates through TimescaleDB jobs',
         'ensuring steady database load, avoiding downtime.'
       ),
       text(
@@ -346,7 +346,7 @@ export const projects: ProjectEntry[] = [
   {
     label: 'Open Source',
     title: 'ARC — AI Connector for Ignition Designer',
-    href: 'https://github.com/TaylorEdgerton',
+    href: 'https://github.com/TaylorEdgerton/arc',
     websiteParagraphs: [
       text(
         'A read-only integration between AI clients and Ignition Designer, Developed',
