@@ -11,6 +11,7 @@ make install     # Install locked dependencies
 make dev-run     # Start the local site at localhost:4321
 make build       # Build the site and deployed PDF resume
 make resume      # Build and refresh the local and public PDF copies
+make linkedin    # Generate paste-ready LinkedIn profile content
 make preview     # Preview the production build
 make all         # Install dependencies and build everything
 make clean       # Remove generated output
@@ -23,11 +24,15 @@ make help        # List available targets
 - Add blog posts under `src/content/blog/`.
 - Add long-form project pages under `src/content/projects/`.
 
-The homepage, HTML resume at `/resume/`, and PDF resume share the structured profile data.
+The homepage, HTML resume, PDF resume, and generated LinkedIn content share the structured profile data.
 
 ## Resume
 
 After changing resume content, run `make resume` and commit the refreshed `public/assets/pdf/Taylor_Edgerton_Resume.pdf`. An ignored distribution copy is also written to `generated/`.
+
+## LinkedIn
+
+`make build`, `make all`, and `make linkedin` write paste-ready profile content to `tayloredgerton/generated/linkedin-content.md`.
 
 ## Deployment
 

@@ -7,9 +7,10 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run build:site && npm run resume:pdf",
+    "build": "npm run build:site && npm run resume:pdf && npm run linkedin",
     "build:site": "astro build",
     "resume:pdf": "node scripts/generate-resume.mjs",
+    "linkedin": "node scripts/generate-linkedin-content.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

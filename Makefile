@@ -6,7 +6,7 @@ PUBLIC_PDF := $(APP_DIR)/public/assets/pdf/$(PDF_NAME)
 
 .DEFAULT_GOAL := help
 
-.PHONY: help install dev-run build resume preview all clean
+.PHONY: help install dev-run build resume linkedin preview all clean
 
 help: ## Show the available commands
 	@awk 'BEGIN {FS = ":.*## "; printf "Usage: make <target>\n\nTargets:\n"} /^[a-zA-Z_-]+:.*## / {printf "  %-12s %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -25,6 +25,9 @@ resume: build ## Build and stage the PDF resume for local development and distri
 	cp $(DIST_PDF) $(LOCAL_PDF)
 	cp $(DIST_PDF) $(PUBLIC_PDF)
 	@echo "Resume available at $(LOCAL_PDF) and $(PUBLIC_PDF)"
+
+linkedin: ## Generate paste-ready LinkedIn profile content
+	npm --prefix $(APP_DIR) run linkedin
 
 preview: ## Preview the production build locally
 	npm --prefix $(APP_DIR) run preview

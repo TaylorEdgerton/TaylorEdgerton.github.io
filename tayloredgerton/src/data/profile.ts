@@ -24,6 +24,7 @@ export interface ProjectEntry {
   resumeDescription: string;
   tags: string[];
   includeOnResume: boolean;
+  includeOnLinkedIn: boolean;
   resumePriority?: number;
 }
 
@@ -46,7 +47,7 @@ export const profile = {
   about: [
     text(
       'Integrating, designing and deploying the systems around critical infrastructure',
-      'making it secure, observable, and easier to operate. My experience covers',
+      'making it secure, observable, and easier to operate. Experience across',
       'SCADA, identity and access, APIs, data infrastructure, Kubernetes, and',
       'GitOps across on-premises and cloud-hosted environments.',
     ),
@@ -54,7 +55,7 @@ export const profile = {
       'This has included deploying systems for two grid-scale battery projects,',
       'integrating a self-hosted identity platform for around 100 users, and',
       'developing a secure live-data and historian API serving nine solar and',
-      'battery farms.',
+      'battery sites.',
     ),
     text(
       'Working on critical systems has taught me to think in terms of risk,',
@@ -83,7 +84,7 @@ export const experience: ExperienceEntry[] = [
         'services, and time-series infrastructure.',
       ),
       text(
-        'Working across deployment architecture, access control, observability,',
+        'Experience across deployment architecture, access control, observability,',
         'reliability, and the continued development of the platform.',
       ),
     ],
@@ -98,7 +99,7 @@ export const experience: ExperienceEntry[] = [
         'auditable access to live and historical operational data.',
       ),
       text(
-        'Working across deployment architecture, access control, observability,',
+        'Experience across deployment architecture, access control, observability,',
         'reliability, and continued platform development.',
       ),
     ],
@@ -126,11 +127,11 @@ export const experience: ExperienceEntry[] = [
         'support for six operational assets.',
       ),
       text(
-        'Led the design and implementation of more repeatable GitOps platform patterns',
+        'Design and implementation of more repeatable GitOps platform patterns',
         'around containerised services, reverse-proxied HTTPS, redundant Ignition',
         'gateways, database replication, and development environments. Worked on',
-        'historian and data infrastructure across roughly 10 sites and more than',
-        '1 TB of raw operational data, including TimescaleDB migration planning',
+        'historian and data infrastructure across 9 sites and more than',
+        '1.5 TB of raw operational data, including TimescaleDB migration planning',
         'and hierarchical aggregates for reporting.',
       ),
     ],
@@ -146,13 +147,13 @@ export const experience: ExperienceEntry[] = [
         'support for six operational assets.',
       ),
       text(
-        'Led repeatable platform patterns for containerised services,',
+        'Implemented repeatable platform patterns for containerised services,',
         'reverse-proxied HTTPS, redundant Ignition gateways, database replication,',
         'and development environments.',
       ),
       text(
-        'Planned historian and TimescaleDB migrations across roughly 10 sites and',
-        'more than 1 TB of raw operational data.',
+        'Planned historian and TimescaleDB migrations across 9 sites and',
+        'more than 1.5 TB of raw operational data.',
       ),
     ],
     tags: [
@@ -242,6 +243,7 @@ export const projects: ProjectEntry[] = [
     ),
     tags: ['Python', 'OAuth2', 'REST APIs', 'Ignition', 'TimescaleDB'],
     includeOnResume: true,
+    includeOnLinkedIn: true,
     resumePriority: 1,
   },
   {
@@ -254,8 +256,8 @@ export const projects: ProjectEntry[] = [
         'applications.',
       ),
       text(
-        'Worked across OIDC, SAML, MFA, group and claim preservation, custom',
-        'authentication flows, and Entra domain routing. The migration reduced',
+        'Experience includes OIDC, SAML, MFA, group and claim preservation, custom',
+        'authentication flows, and Entra federation and domain routing. The migration reduced',
         'vendor dependency while providing more control over how users access',
         'critical systems and greater integration flexibility with services.',
       ),
@@ -267,6 +269,7 @@ export const projects: ProjectEntry[] = [
     ),
     tags: ['OIDC', 'SAML', 'Authentik', 'Entra ID', 'MFA'],
     includeOnResume: true,
+    includeOnLinkedIn: true,
     resumePriority: 2,
   },
   {
@@ -291,6 +294,7 @@ export const projects: ProjectEntry[] = [
     ),
     tags: ['Kubernetes', 'Terraform', 'Argo CD', 'RBAC', 'Longhorn', 'Kustomize'],
     includeOnResume: true,
+    includeOnLinkedIn: true,
     resumePriority: 3,
   },
   {
@@ -321,6 +325,7 @@ export const projects: ProjectEntry[] = [
       'Continuous Aggregates',
     ],
     includeOnResume: false,
+    includeOnLinkedIn: false,
   },
   {
     label: 'Observability',
@@ -342,6 +347,7 @@ export const projects: ProjectEntry[] = [
     ),
     tags: ['Prometheus', 'Loki', 'Grafana Alloy', 'OpenTelemetry'],
     includeOnResume: false,
+    includeOnLinkedIn: false,
   },
   {
     label: 'Open Source',
@@ -365,6 +371,7 @@ export const projects: ProjectEntry[] = [
     ),
     tags: ['Java', 'MCP', 'Ignition SDK'],
     includeOnResume: false,
+    includeOnLinkedIn: false,
   },
   {
     label: 'Engineering Workflow',
@@ -388,6 +395,7 @@ export const projects: ProjectEntry[] = [
     ),
     tags: ['AI Agents', 'Engineering Governance', 'Developer Tooling'],
     includeOnResume: false,
+    includeOnLinkedIn: false,
   },
 ];
 
