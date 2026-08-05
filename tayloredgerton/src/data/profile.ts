@@ -35,7 +35,7 @@ export const profile = {
   focus: 'Platform & Integration Engineering',
   bio: text(
     'Designing and operating reliable platforms, integrations, and data systems',
-    'for SCADA developers and critical infrastructure.',
+    'for SCADA developers, operators, managers and critical infrastructure.',
   ),
   location: 'Brisbane, Australia - Remote',
   email: 'taylor@edgerton.com.au',
@@ -106,7 +106,7 @@ export const experience: ExperienceEntry[] = [
       'Ignition',
       'Python',
       'Kubernetes',
-      'Postgres',
+      'PostgreSQL',
       'TimescaleDB',
       'OAuth2',
       'REST APIs',
@@ -227,8 +227,8 @@ export const projects: ProjectEntry[] = [
     websiteParagraphs: [
       text(
         'Designed and developed a secure data access layer for nine solar and',
-        'battery sites, integrating live SCADA and historian data with a',
-        'self-hosted identity platform.',
+        'battery sites, integrating live SCADA and historian database data with a',
+        'self-hosted identity platform via REST APIs.',
       ),
       text(
         'Used OAuth2 to provide controlled, auditable access while keeping',
@@ -236,7 +236,7 @@ export const projects: ProjectEntry[] = [
       ),
     ],
     resumeDescription: text(
-      'Integrated live SCADA and historian data with self-hosted identity, using',
+      'Integrated live SCADA and historian database data with self-hosted identity, using',
       'OAuth2 to provide controlled and auditable access across nine solar and',
       'battery sites.',
     ),
@@ -257,7 +257,7 @@ export const projects: ProjectEntry[] = [
         'Worked across OIDC, SAML, MFA, group and claim preservation, custom',
         'authentication flows, and Entra domain routing. The migration reduced',
         'vendor dependency while providing more control over how users access',
-        'critical systems.',
+        'critical systems and greater integration flexibility with services.',
       ),
     ],
     resumeDescription: text(
@@ -289,7 +289,7 @@ export const projects: ProjectEntry[] = [
       'reducing ideal environment setup from roughly 2–3 hours to around',
       '30 minutes.',
     ),
-    tags: ['Kubernetes', 'Terraform', 'Argo CD', 'RBAC', 'Longhorn'],
+    tags: ['Kubernetes', 'Terraform', 'Argo CD', 'RBAC', 'Longhorn', 'Kustomize'],
     includeOnResume: true,
     resumePriority: 3,
   },
@@ -298,9 +298,10 @@ export const projects: ProjectEntry[] = [
     title: 'Historian Aggregation and Retention Pipeline',
     websiteParagraphs: [
       text(
-        'Planned and implemented a TimescaleDB migration path for historian data',
-        'across roughly 10 sites, covering more than 200,000 data points and over',
-        '1 TB of raw operational data.',
+        'Planned and implemented a TimescaleDB migration path and Postgres upgrade for historian data',
+        'across 9 historian databases, covering more than 200,000 data points and over',
+        '1 TB of raw operational data. Involving automated backfilling raw data and aggregates through TimescaleDB jobs',
+        'ensuring steady database load, avoiding downtime.'
       ),
       text(
         'Introduced hierarchical continuous aggregates and retention policies to',
@@ -310,8 +311,8 @@ export const projects: ProjectEntry[] = [
       ),
     ],
     resumeDescription: text(
-      'Planned a TimescaleDB migration path and hierarchical aggregation pipeline',
-      'for more than 200,000 data points and over 1 TB of historian data.',
+      'Planned a TimescaleDB migration path, Postgres upgrade, and hierarchical aggregation pipeline',
+      'for more than 200,000 data points and over 1.5 TB of historian data.',
     ),
     tags: [
       'TimescaleDB',
@@ -350,12 +351,12 @@ export const projects: ProjectEntry[] = [
       text(
         'A read-only integration between AI clients and Ignition Designer, Developed',
         'using MCP and the Ignition SDK. ARC exposes structured project context',
-        'so developers can inspect bindings, scripts, and project structure',
+        'so developers can document, inspect, troubleshoot and audit bindings, scripts, and project structure',
         'without manually navigating each part of the system.',
       ),
       text(
         'Designed around explicit access boundaries, review, and project',
-        'understanding rather than unchecked code generation.',
+        'understanding rather than automated unchecked code generation.',
       ),
     ],
     resumeDescription: text(
@@ -397,7 +398,7 @@ export const skillGroups = [
   },
   {
     label: 'Integration',
-    skills: ['REST APIs', 'OAuth2', 'OIDC', 'SAML', 'OPC UA', 'MQTT', 'MCP'],
+    skills: ['REST APIs', 'OAuth2', 'OIDC', 'SAML', 'OPC UA', 'MQTT', 'MCP', 'Certificate Management', 'mTLS'],
   },
   {
     label: 'Data',
