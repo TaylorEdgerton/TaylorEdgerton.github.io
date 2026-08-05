@@ -34,7 +34,7 @@ export const profile = {
   currentRole: 'Senior Automation Engineer',
   focus: 'Platform & Integration Engineering',
   bio: text(
-    'I design and operate reliable platforms, integrations, and data systems',
+    'Designing and operating reliable platforms, integrations, and data systems',
     'for SCADA developers and critical infrastructure.',
   ),
   location: 'Brisbane, Australia - Remote',
@@ -58,7 +58,7 @@ export const profile = {
     ),
     text(
       'Working on critical systems has taught me to think in terms of risk,',
-      'rollback, reliability, and simplicity. I enjoy code, systems, family,',
+      'rollback, reliability, and simplicity. I enjoy problem solving, systems, family,',
       'and the outdoors.',
     ),
   ],
@@ -67,7 +67,7 @@ export const profile = {
     'critical-infrastructure systems across identity, APIs, Kubernetes, GitOps,',
     'observability, SCADA, and time-series data. Experienced in deploying and',
     'supporting systems across renewable energy assets, with an emphasis on',
-    'reliability, secure access, repeatable delivery, and safe migration.',
+    'reliability, secure access, and repeatable delivery.',
   ),
 } as const;
 
@@ -106,6 +106,7 @@ export const experience: ExperienceEntry[] = [
       'Ignition',
       'Python',
       'Kubernetes',
+      'Postgres',
       'TimescaleDB',
       'OAuth2',
       'REST APIs',
@@ -118,14 +119,14 @@ export const experience: ExperienceEntry[] = [
     websiteParagraphs: [
       text(
         'Deployed SCADA runtime environments and containerised supporting',
-        'services through GitOps workflows for two greenfield BESS projects.',
+        'services for two greenfield BESS projects.',
         'Delivered engineering work spanning SCADA platforms, deployment',
         'automation, integrations, and supporting services across more than 15',
         'renewable energy, battery storage, and gas assets, including on-call',
         'support for six operational assets.',
       ),
       text(
-        'Led the design and implementation of more repeatable platform patterns',
+        'Led the design and implementation of more repeatable GitOps platform patterns',
         'around containerised services, reverse-proxied HTTPS, redundant Ignition',
         'gateways, database replication, and development environments. Worked on',
         'historian and data infrastructure across roughly 10 sites and more than',
@@ -139,7 +140,7 @@ export const experience: ExperienceEntry[] = [
         'services through GitOps workflows for two greenfield BESS projects.',
       ),
       text(
-        'Delivered engineering work spanning SCADA platforms, deployment',
+        'Delivered engineering work covering SCADA platforms, deployment',
         'automation, integrations, and supporting services across more than 15',
         'renewable energy, battery storage, and gas assets, including on-call',
         'support for six operational assets.',
